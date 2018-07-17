@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta name="baidu-site-verification" content="UqlC4pwKIm" />
+  <meta name="baidu-site-verification" content="d3U0dGeqGw" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Spring MVC 学习总结（八）——Spring MVC概要与环境配置（IDEA+Maven+Tomcat7+JDK8、示例与视频）目录 一、MVC概要二、Spring MVC介绍2.1、学习资料三、第一个Spring MVC 项目：Hello World3.1、IntelliJ IDEA中创建一个Maven项目3.2、添加Web项目支持3.3、配置Tomcat Web容器3.4、将项目发布到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springMVC">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/springMVC/index.html">
+<meta property="og:site_name" content="我和阿凡的温馨小屋">
+<meta property="og:description" content="Spring MVC 学习总结（八）——Spring MVC概要与环境配置（IDEA+Maven+Tomcat7+JDK8、示例与视频）目录 一、MVC概要二、Spring MVC介绍2.1、学习资料三、第一个Spring MVC 项目：Hello World3.1、IntelliJ IDEA中创建一个Maven项目3.2、添加Web项目支持3.3、配置Tomcat Web容器3.4、将项目发布到">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-17T06:11:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="springMVC">
+<meta name="twitter:description" content="Spring MVC 学习总结（八）——Spring MVC概要与环境配置（IDEA+Maven+Tomcat7+JDK8、示例与视频）目录 一、MVC概要二、Spring MVC介绍2.1、学习资料三、第一个Spring MVC 项目：Hello World3.1、IntelliJ IDEA中创建一个Maven项目3.2、添加Web项目支持3.3、配置Tomcat Web容器3.4、将项目发布到">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/17/springMVC/"/>
+
+
+
+
+
+  <title>springMVC | 我和阿凡的温馨小屋</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">我和阿凡的温馨小屋</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">My Awesome Site</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/17/springMVC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="qiuzhibin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我和阿凡的温馨小屋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">springMVC</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T14:11:25+08:00">
+                2018-07-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-17T14:11:35+08:00">
+                2018-07-17
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/17/springMVC/" class="leancloud_visitors" data-flag-title="springMVC">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Spring MVC 学习总结（八）——Spring MVC概要与环境配置（IDEA+Maven+Tomcat7+JDK8、示例与视频）<br>目录</p>
+<p>一、MVC概要<br>二、Spring MVC介绍<br>2.1、学习资料<br>三、第一个Spring MVC 项目：Hello World<br>3.1、IntelliJ IDEA中创建一个Maven项目<br>3.2、添加Web项目支持<br>3.3、配置Tomcat Web容器<br>3.4、将项目发布到Git远程仓库（非必要）<br>3.5、添加依赖的jar包<br>3.6、将依赖的包添加到项目发布文件中<br>3.7、修改web.xml注册中心控制器DispatcherServlet<br>3.8、添加Spring MVC配置文件<br>3.9、创建HelloWorld控制器<br>3.10、创建视图<br>3.11、测试运行<br>四、用户管理示例<br>4.1、用户Bean<br>4.2、用户数据访问对象<br>4.3、用户业务对象<br>4.4、控制器<br>4.5、用户视图<br>4.6、Spring-MVC配置文件<br>五、示例下载<br>六、视频<br>七、作业<br>一、MVC概要<br>MVC是模型(Model)、视图(View)、控制器(Controller)的简写，是一种软件设计规范，用一种将业务逻辑、数据、显示分离的方法组织代码，MVC主要作用是降低了视图与业务逻辑间的双向偶合。MVC不是一种设计模式，MVC是一种架构模式。当然不同的MVC存在差异。</p>
+<p>在web早期的开发中，通常采用的都是Model1。Model1中，如图所示主要分为两层，视图层和模型层。Model2把一个项目分成三部分，包括视图、控制、模型。这样不仅提高的代码的复用率与项目的扩展性，且大大降低了项目的维护成本。Model 1模式的实现比较简单，适用于快速开发小规模项目，Model1中JSP页面身兼View和Controller两种角色，将控制逻辑和表现逻辑混杂在一起，从而导致代码的重用性非常低，增加了应用的扩展性和维护的难度。Model2消除了Model1的缺点。</p>
+<p>Model1</p>
+<p>Model2</p>
+<p>常见的服务器端MVC框架有：Struts、Spring MVC、ASP.NET MVC、Zend Framework、JSF；常见前端MVC框架：angularjs、reactjs、vue.js；由MVC演化出了另外一些模式如：MVP、MVVM。</p>
+<p>二、Spring MVC介绍<br>Spring MVC是Spring Framework的一部分，是基于Java实现MVC的轻量级Web框架。Spring MVC的特点：<br>1、轻量<br>2、高效<br>3、与Spring兼容性好<br>4、功能强大<br>RESTful、数据验证、格式化、绑定机制、本地化、主题等<br>5、简洁灵活</p>
+<p>Spring的web框架围绕DispatcherServlet设计。 DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.5开始，使用Java 5或者以上版本的用户可以采用基于注解的controller声明方式。官网上说Spring的web模块提供了大量独特的功能，包括:<br>清晰的角色划分：控制器（controller）、验证器（validator）、 命令对象（command object）、表单对象（form object）、模型对象（model object）、 Servlet分发器（DispatcherServlet）、 处理器映射（handler mapping）、视图解析器（view resolver）等等。 每一个角色都可以由一个专门的对象来实现。</p>
+<p>强大而直接的配置方式：将框架类和应用程序类都能作为JavaBean配置，支持跨多个context的引用，例如，在web控制器中对业务对象和验证器（validator）的引用。</p>
+<p>可适配、非侵入：可以根据不同的应用场景，选择合适的控制器子类 （simple型、command型、form型、wizard型、multi-action型或者自定义），而不是从单一控制器 （比如Action/ActionForm）继承。</p>
+<p>可重用的业务代码：可以使用现有的业务对象作为命令或表单对象，而不需要去扩展某个特定框架的基类。</p>
+<p>可定制的绑定（binding） 和验证（validation）：比如将类型不匹配作为应用级的验证错误， 这可以保存错误的值。再比如本地化的日期和数字绑定等等。在其他某些框架中，你只能使用字符串表单对象， 需要手动解析它并转换到业务对象。</p>
+<p>可定制的handler mapping和view resolution：Spring提供从最简单的URL映射， 到复杂的、专用的定制策略。与某些web MVC框架强制开发人员使用单一特定技术相比，Spring显得更加灵活。</p>
+<p>灵活的model转换：在Springweb框架中，使用基于Map的 键/值对来达到轻易地与各种视图技术的集成。</p>
+<p>可定制的本地化和主题（theme）解析：支持在JSP中可选择地使用Spring标签库、支持JSTL、支持Velocity（不需要额外的中间层）等等。</p>
+<p>简单而强大的JSP标签库（Spring Tag Library）：支持包括诸如数据绑定和主题（theme） 之类的许多功能。它提供在标记方面的最大灵活性。</p>
+<p>JSP表单标签库：在Spring2.0中引入的表单标签库，使得在JSP中编写 表单更加容易。</p>
+<p>Spring Bean的生命周期可以被限制在当前的HTTP Request或者HTTP Session。 准确的说，这并非Spring MVC框架本身特性，而应归属于Sping MVC使用的WebApplicationContext容器。</p>
+<p>2.1、学习资料<br><a href="http://7xvpsh.com1.z0.glb.clouddn.com/" target="_blank" rel="noopener">http://7xvpsh.com1.z0.glb.clouddn.com/</a> Spring MVC翻译</p>
+<p><a href="http://spring.cndocs.tk/" target="_blank" rel="noopener">http://spring.cndocs.tk/</a> Spring翻译</p>
+<p><a href="http://blog.csdn.net/tangtong1/article/details/51326887" target="_blank" rel="noopener">http://blog.csdn.net/tangtong1/article/details/51326887</a> Spring 1-6章</p>
+<p><a href="https://github.com/linesh-simplicity/translation-spring-mvc-4-documentation" target="_blank" rel="noopener">https://github.com/linesh-simplicity/translation-spring-mvc-4-documentation</a> 翻译列表</p>
+<p><a href="https://docs.spring.io/spring-framework/docs/4.2.4.RELEASE/spring-framework-reference/html/mvc.html" target="_blank" rel="noopener">https://docs.spring.io/spring-framework/docs/4.2.4.RELEASE/spring-framework-reference/html/mvc.html</a> 官方帮助</p>
+<p>三、第一个Spring MVC 项目：Hello World<br>3.1、IntelliJ IDEA中创建一个Maven项目<br>在IntelliJ IDEA中新建Maven项目，选择“File-&gt;New-&gt;Project”，创建一个简单项目，不选择模板。</p>
+<p>选择“Maven”，不需要使用内置结构（模板）</p>
+<p>填写包名与项目名：</p>
+<p>选择项目位置，尽量不要有中文、空格或特殊字符，点击完成：</p>
+<p>完成后点击“Enable-Auto import”</p>
+<p>3.2、添加Web项目支持<br>前面我们创建好了一个普通的Java项目，现在需要将普通项目转换成Web项目</p>
+<p>选择“Web Application”</p>
+<p>点击OK后项目就变成Web项目了，且根据Maven风格创建了不同类型的文件夹</p>
+<p>如果使用内置架构创建则需要手动添加不同的文件夹类型</p>
+<p>3.3、配置Tomcat Web容器<br>点击右侧下拉列表，选择编辑配置文件</p>
+<p> 在配置窗口中点中左上角的“加号”-&gt;Tomcat Server-&gt;”Local”</p>
+<p>命名</p>
+<p>添加部署包</p>
+<p> 设置项目的虚拟目录名称（Application context应用上下文）</p>
+<p>选择修改项目后服务器动作</p>
+<p>修改index.jsp文件后运行项目</p>
+<p>启动项目后的运行结果：</p>
+<p>注意这里的tomcat的日志与eclipse整合后是不一样的，分开在多个窗口中输出。</p>
+<p>3.4、将项目发布到Git远程仓库（非必要）<br>点击“VCS”-&gt;”Enable Version Control Integration”，将项目集成到版本控制器中</p>
+<p>选择版本控制器类型为Git</p>
+<p>提交项目到本地仓库</p>
+<p> 选择要提交的文件并填写好日志信息：</p>
+<p>管理远程仓库地址</p>
+<p>点击加号添加</p>
+<p>添加成功后</p>
+<p>提交到远程仓库</p>
+<p>点击push</p>
+<p>提交成功</p>
+<p>查看结果</p>
+<p>3.5、添加依赖的jar包<br>1、修改pom.xml文件、添加jar包的依赖，主要有：Spring框架核心库、Spring MVC、JSTL等，具体信息如下：</p>
+<p>复制代码<br>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<p><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"><br>    <modelversion>4.0.0</modelversion></project></p>
+<pre><code>&lt;groupId&gt;com.zhangguo&lt;/groupId&gt;
+&lt;artifactId&gt;springmvc08&lt;/artifactId&gt;
+&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+&lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+    &lt;spring.version&gt;4.3.0.RELEASE&lt;/spring.version&gt;
+&lt;/properties&gt;
+
+&lt;!--项目依赖 --&gt;
+&lt;dependencies&gt;
+    &lt;!--单元测试--&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;junit&lt;/groupId&gt;
+        &lt;artifactId&gt;junit&lt;/artifactId&gt;
+        &lt;version&gt;4.10&lt;/version&gt;
+        &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+
+    &lt;!--j2ee相关包 servlet、jsp、jstl--&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+        &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+        &lt;version&gt;3.1.0&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;
+        &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;
+        &lt;version&gt;2.2&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+        &lt;artifactId&gt;jstl&lt;/artifactId&gt;
+        &lt;version&gt;1.2&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!--mysql驱动包--&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;mysql&lt;/groupId&gt;
+        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+        &lt;version&gt;5.1.35&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!--spring相关包--&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+        &lt;version&gt;${spring.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+        &lt;version&gt;${spring.version}&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!--其他需要的包--&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;
+        &lt;version&gt;3.4&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;commons-fileupload&lt;/groupId&gt;
+        &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;
+        &lt;version&gt;1.3.1&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+
+&lt;build&gt;
+    &lt;finalName&gt;maven-springmvc&lt;/finalName&gt;
+    &lt;resources&gt;
+        &lt;!--表示把java目录下的有关xml文件,properties文件编译/打包的时候放在resource目录下--&gt;
+        &lt;resource&gt;
+            &lt;directory&gt;${basedir}/src/main/java&lt;/directory&gt;
+            &lt;includes&gt;
+                &lt;include&gt;**/*.properties&lt;/include&gt;
+                &lt;include&gt;**/*.xml&lt;/include&gt;
+            &lt;/includes&gt;
+        &lt;/resource&gt;
+        &lt;resource&gt;
+            &lt;directory&gt;${basedir}/src/main/resources&lt;/directory&gt;
+        &lt;/resource&gt;
+    &lt;/resources&gt;
+    &lt;plugins&gt;
+        &lt;!--servlet容器 jetty插件--&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.eclipse.jetty&lt;/groupId&gt;
+            &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;9.3.10.v20160621&lt;/version&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre><p><br>复制代码<br>如果需要其它的包可以去中心仓库搜索</p>
+<p>如果下载太慢可以将maven的远程中心仓库的地址换成国内仓库。</p>
+<p>默认会自动下载jar包，第一次下载会较慢，以后从本地引用就会快很多</p>
+<p>当依赖成功时，会加载的jar包如下：</p>
+<p>将maven依赖的包添加到项目中，发布时一起打包</p>
+<p>3.6、将依赖的包添加到项目发布文件中<br>点击项目结构（ctrl+shift+alt+s）</p>
+<p> 点击“Artifacts”-&gt;”Output Layout”-&gt;双击要输出的包</p>
+<p>成功添加后在lib目录下就可以看到输出的包了</p>
+<p>3.7、修改web.xml注册中心控制器DispatcherServlet<br>Spring MVC框架像许多其他MVC框架一样, 请求驱动,围绕一个中心Servlet分派请求及提供其他功能，DispatcherServlet是一个实际的Servlet (它继承自HttpServlet 基类)。如下图所示当发起请求时被前置的控制器拦截到请求，根据请求参数生成代理请求，找到请求对应的实际控制器，控制器处理请求，创建数据模型，访问数据库，将模型响应给中心控制器，控制器使用模型与视图渲染视图结果，将结果返回给中心控制器，再将结果返回给请求者。</p>
+<p>修改web.xml文件注册该Servlet，修改后的web.xml文件如下：</p>
+<p>复制代码<br>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<p><web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1"></web-app></p>
+<pre><code>&lt;!--welcome pages--&gt;
+&lt;welcome-file-list&gt;
+    &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+&lt;/welcome-file-list&gt;
+
+&lt;!--配置springmvc DispatcherServlet--&gt;
+&lt;servlet&gt;
+    &lt;servlet-name&gt;springMVC&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+    &lt;init-param&gt;
+        &lt;!--Sources标注的文件夹下需要新建一个spring文件夹--&gt;
+        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+        &lt;param-value&gt;classpath*:spring/spring-mvc.xml&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;async-supported&gt;true&lt;/async-supported&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;springMVC&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+&lt;filter&gt;
+    &lt;filter-name&gt;encodingFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;org.springframework.web.filter.CharacterEncodingFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;encoding&lt;/param-name&gt;
+        &lt;param-value&gt;UTF-8&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;forceEncoding&lt;/param-name&gt;
+        &lt;param-value&gt;true&lt;/param-value&gt;
+    &lt;/init-param&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;encodingFilter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+</code></pre><p><br>复制代码<br>3.8、添加Spring MVC配置文件<br>在src/main/resources源代码目录下添加spring目录与spring-mvc.xml配置文件，配置的形式与Spring容器配置基本类似，为了支持基于注解的IOC，设置了自动扫描包的功能，具体配置信息如下：</p>
+<p>复制代码<br>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<p><beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc" xsi:schemalocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd"><br>    <!--启用spring的一些annotation --><br>    <a href="context:annotation-config/" target="_blank" rel="noopener">context:annotation-config/</a></beans></p>
+<pre><code>&lt;!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 --&gt;
+&lt;context:component-scan base-package=&quot;com.zhangguo.springmvc08.controller&quot;&gt;
+    &lt;context:include-filter type=&quot;annotation&quot; expression=&quot;org.springframework.stereotype.Controller&quot;/&gt;
+&lt;/context:component-scan&gt;
+
+&lt;!--HandlerMapping 无需配置，springmvc可以默认启动--&gt;
+
+&lt;!--静态资源映射--&gt;
+&lt;mvc:default-servlet-handler/&gt;
+&lt;!--如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，如果不是静态资源的请求，才由DispatcherServlet继续处--&gt;
+&lt;!--本项目把静态资源放在了WEB-INF的statics目录下，资源映射如下--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/css/**&quot; location=&quot;/WEB-INF/statics/css/&quot;/&gt;--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/js/**&quot; location=&quot;/WEB-INF/statics/js/&quot;/&gt;--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/image/**&quot; location=&quot;/WEB-INF/statics/image/&quot;/&gt;--&gt;
+
+&lt;!--但是项目部署到linux下发现WEB-INF的静态资源会出现无法解析的情况，但是本地tomcat访问正常，因此建议还是直接把静态资源放在webapp的statics下，映射配置如下--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/css/**&quot; location=&quot;/statics/css/&quot;/&gt;--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/js/**&quot; location=&quot;/statics/js/&quot;/&gt;--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/image/**&quot; location=&quot;/statics/images/&quot;/&gt;--&gt;
+
+&lt;!-- 配置注解驱动 可以将request参数与绑定到controller参数上 --&gt;
+&lt;mvc:annotation-driven/&gt;
+
+&lt;!-- 对模型视图名称的解析，即在模型视图名称添加前后缀(如果最后一个还是表示文件夹,则最后的斜杠不要漏了) 使用JSP--&gt;
+&lt;!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- --&gt;
+&lt;bean id=&quot;defaultViewResolver&quot; class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
+    &lt;property name=&quot;viewClass&quot; value=&quot;org.springframework.web.servlet.view.JstlView&quot;/&gt;
+    &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot;/&gt;&lt;!--设置JSP文件的目录位置--&gt;
+    &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;!-- springmvc文件上传需要配置的节点--&gt;
+&lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&gt;
+    &lt;property name=&quot;maxUploadSize&quot; value=&quot;20971500&quot;/&gt;
+    &lt;property name=&quot;defaultEncoding&quot; value=&quot;UTF-8&quot;/&gt;
+    &lt;property name=&quot;resolveLazily&quot; value=&quot;true&quot;/&gt;
+&lt;/bean&gt;
+</code></pre><p><br>复制代码<br>在视图解析中我们把所有的视图都存放在/WEB-INF/目录下，这样是为了视图安全，因为这个目录客户端不能直接访问。</p>
+<p>3.9、创建HelloWorld控制器<br>在src/main/java源代码目录下创建包com.zhangguo.springmvc08.controller，在包下创建一个普通的类：HomeController，具体代码如下：</p>
+<p>复制代码<br>package com.zhangguo.springmvc08.controller;</p>
+<p>import org.springframework.stereotype.Controller;<br>import org.springframework.ui.Model;<br>import org.springframework.web.bind.annotation.RequestMapping;</p>
+<p>@Controller  //声明为控制器<br>@RequestMapping(path = “/home”)  //请求映射<br>public class HomeController {<br>    @RequestMapping(path = “/index”)  //请求映射<br>    public String index(Model model){<br>        model.addAttribute(“message”,”Hello Spring MVC!”);<br>        return “home/index”;<br>    }<br>}<br>复制代码<br> 注解为@Controller是为了让Spring IOC容器初始化时自动扫描到；@RequestMapping是为了映射请求路径，这里因为类与方法上都有映射所以访问时应该是/home/index；方法中声明Model类型的参数是为了把Action中的数据带到视图中；方法返回的结果是视图的名称index。</p>
+<p>3.10、创建视图<br>在WEB-INF/view目录中创建视图，视图将从Action中带回的信息展示，具体内容如下：</p>
+<p>复制代码<br>&lt;%@ page contentType=”text/html;charset=UTF-8” language=”java” %&gt;<br>&lt;%@ taglib prefix=”c” uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> %&gt;<br>&lt;!doctype html&gt;</p>
+<p><html></html></p>
+<p><head><br>    <meta charset="UTF-8"><br>    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><br>    <meta http-equiv="X-UA-Compatible" content="ie=edge"><br>    <title>Document</title><br></head></p>
+<p><body></body></p>
+<p></p><h2><br>    ${message}<br></h2><br><br><br>复制代码<p></p>
+<p>3.11、测试运行<br>启动Tomcat运行项目，请注意查看启动信息，如果有异常应该先解决异常信息，运行成功后的结果如下所示：</p>
+<p>四、用户管理示例<br>使用Spring MVC实现一个简单的用户管理示例，项目结构如下</p>
+<p>运行结果：</p>
+<p>4.1、用户Bean<br>用户实体类user.java</p>
+<p>复制代码<br>package com.zhangguo.springmvc08.entity;</p>
+<p>/***</p>
+<ul>
+<li><p>用户<br>*/<br>public class User {<br> public User(int id, String name, String address, String phone) {</p>
+<pre><code>this.id = id;
+this.name = name;
+this.address = address;
+this.phone = phone;
+</code></pre><p> }</p>
+<p> public User() {<br> }</p>
+<p> /**</p>
+<ul>
+<li>编号<br>*/<br>private int id;<br>/**</li>
+<li>姓名<br>*/<br>private String name;<br>/**</li>
+<li>地址<br>*/<br>private String address;<br>/**</li>
+<li><p>电话<br>*/<br>private String phone;</p>
+<p>public int getId() {<br> return id;<br>}</p>
+<p>public void setId(int id) {<br> this.id = id;<br>}</p>
+<p>/**</p>
+</li>
+<li><p>姓名<br>*/<br>public String getName() {<br> return name;<br>}</p>
+<p>/**</p>
+</li>
+<li><p>姓名<br>*/<br>public void setName(String name) {<br> this.name = name;<br>}</p>
+<p>public String getAddress() {<br> return address;<br>}</p>
+<p>public void setAddress(String address) {<br> this.address = address;<br>}</p>
+<p>public String getPhone() {<br> return phone;<br>}</p>
+<p>public void setPhone(String phone) {<br> this.phone = phone;<br>}<br>}<br>复制代码<br>4.2、用户数据访问对象<br>用户数据访问接口 IUserDAO</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>复制代码<br>package com.zhangguo.springmvc08.dao;</p>
+<p>import com.zhangguo.springmvc08.entity.User;</p>
+<p>import java.util.List;</p>
+<p>/**</p>
+<ul>
+<li>用户数据访问接口<br><em>/<br>public interface IUserDAO {<br> /**获得所有</em>/<br> List<user> getAll();<br> /<strong>根据用户编号获得用户对象*/<br> User getUserById(int id);<br> /</strong>新增<em>/<br> boolean add(User user);<br> /**删除</em>/<br> boolean delete(int id);<br> /*<em>更新</em>/<br> boolean update(User user);<br>}<br>复制代码<br>UserDAO.java</user></li>
+</ul>
+<p>复制代码<br>package com.zhangguo.springmvc08.dao;</p>
+<p>import com.zhangguo.springmvc08.entity.User;<br>import org.springframework.stereotype.Repository;</p>
+<p>import java.util.ArrayList;<br>import java.util.List;</p>
+<p>/**</p>
+<ul>
+<li><p>用户数据访问对象<br>*/<br>@Repository<br>public class UserDAO implements IUserDAO {<br> private static List<user> users = new ArrayList<user>();</user></user></p>
+<p> static {</p>
+<pre><code>users.add(new User(1, &quot;刘德华&quot;, &quot;中国香港&quot;, &quot;13767890098&quot;));
+users.add(new User(2, &quot;张学友&quot;, &quot;中国广东&quot;, &quot;18989890767&quot;));
+users.add(new User(3, &quot;张国立&quot;, &quot;中国北京&quot;, &quot;13345672345&quot;));
+users.add(new User(4, &quot;张靓因&quot;, &quot;中国上海&quot;, &quot;15890908679&quot;));
+users.add(new User(5, &quot;齐萍萍&quot;, &quot;中国珠海&quot;, &quot;13246712235&quot;));
+</code></pre><p> }</p>
+<p> /**</p>
+<ul>
+<li><p>获得所有<br>*/<br>public List<user> getAll() {<br> return users;<br>}</user></p>
+<p>/**</p>
+</li>
+<li><p>单个用户<br>*/<br>public User getUserById(int id) {<br> for (User user : users) {</p>
+<pre><code>if (user.getId() == id) {
+    return user;
+}
+</code></pre><p> }<br> return null;<br>}</p>
+<p>/**</p>
+</li>
+<li><p>添加<br>*/<br>public boolean add(User user) {<br> if(user.getId()&lt;=0)<br> {</p>
+<pre><code>user.setId(users.get(users.size()-1).getId()+1);
+</code></pre><p> }<br> users.add(user);<br> return true;<br>}</p>
+<p>/**</p>
+</li>
+<li><p>删除<br>*/<br>public boolean delete(int id) {<br> users.remove(getUserById(id));<br> return true;<br>}</p>
+<p>/**</p>
+</li>
+<li>更新<br>*/<br>public boolean update(User user) {<br> User oldUser = getUserById(user.getId());<br> oldUser.setName(user.getName());<br> oldUser.setAddress(user.getAddress());<br> oldUser.setPhone(user.getPhone());<br> return true;<br>}<br>}<br>复制代码<br>4.3、用户业务对象<br>用户业务类UserService.java</li>
+</ul>
+</li>
+</ul>
+<p>复制代码<br>package com.zhangguo.springmvc08.service;</p>
+<p>import com.zhangguo.springmvc08.dao.IUserDAO;<br>import com.zhangguo.springmvc08.dao.UserDAO;<br>import com.zhangguo.springmvc08.entity.User;<br>import org.springframework.beans.factory.annotation.Autowired;<br>import org.springframework.stereotype.Service;</p>
+<p>import javax.annotation.Resource;<br>import java.util.List;</p>
+<p>/*<em>用户业务</em>/<br>@Service<br>public class UserService {</p>
+<pre><code>@Autowired
+IUserDAO userdao;
+
+public List&lt;User&gt; queryAllUsers(){
+    return userdao.getAll();
+}
+
+public User getUserById(int id){
+    return userdao.getUserById(id);
+}
+
+public boolean deleteUser(int id){
+    return userdao.delete(id);
+}
+
+public  boolean addUser(User user){
+    return userdao.add(user);
+}
+
+public boolean editUser(User user){
+    return userdao.update(user);
+}
+</code></pre><p>}<br>复制代码<br>4.4、控制器<br>用户控制器UserController.java</p>
+<p>复制代码<br>package com.zhangguo.springmvc08.controller;</p>
+<p>import com.zhangguo.springmvc08.entity.User;<br>import com.zhangguo.springmvc08.service.UserService;<br>import org.springframework.beans.factory.annotation.Autowired;<br>import org.springframework.stereotype.Controller;<br>import org.springframework.ui.Model;<br>import org.springframework.web.bind.annotation.PathVariable;<br>import org.springframework.web.bind.annotation.RequestMapping;<br>import org.springframework.web.bind.annotation.RequestMethod;</p>
+<p>@Controller  //声明为控制器<br>@RequestMapping(path = “/user”)  //请求映射<br>public class UserController {</p>
+<pre><code>@Autowired
+UserService userService;
+
+@RequestMapping(path = &quot;/index&quot;)  //请求映射
+public String index(Model model){
+    model.addAttribute(&quot;list&quot;,userService.queryAllUsers());
+    return &quot;user/index&quot;;
+}
+
+@RequestMapping(&quot;/delete/{id}&quot;)
+public String delete(@PathVariable int id){
+    userService.deleteUser(id);
+    return &quot;redirect:/user/index&quot;;
+}
+
+@RequestMapping(&quot;/add&quot;)
+public String add(){
+    return &quot;user/add&quot;;
+}
+
+@RequestMapping(value = &quot;/add&quot;,method = RequestMethod.POST)
+public String add(User user){
+    userService.addUser(user);
+    return &quot;redirect:/user/index&quot;;
+}
+
+@RequestMapping(&quot;/edit/{id}&quot;)
+public String edit(@PathVariable int id,Model model){
+    model.addAttribute(&quot;user&quot;,userService.getUserById(id));
+    return &quot;user/edit&quot;;
+}
+
+@RequestMapping(value = &quot;/edit&quot;,method = RequestMethod.POST)
+public String edit(User user){
+    userService.editUser(user);
+    return &quot;redirect:/user/index&quot;;
+}
+</code></pre><p>}<br>复制代码<br>4.5、用户视图<br>列表：user/index.jsp</p>
+<p>复制代码<br>&lt;%@ page contentType=”text/html;charset=UTF-8” language=”java” %&gt;<br>&lt;%@ taglib prefix=”c” uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> %&gt;<br>&lt;!doctype html&gt;</p>
+<p><html></html></p>
+<p><head><br>    <meta charset="UTF-8"><br>    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><br>    <meta http-equiv="X-UA-Compatible" content="ie=edge"><br>    <title>用户管理</title><br></head></p>
+<p><body></body></p>
+<p></p><h2><br>    用户管理<br></h2><p></p>
+<p><table width="100%" border="1"><br>    <tr><br>        <th>编号</th><br>        <th>姓名</th><br>        <th>地址</th><br>        <th>电话</th><br>        <th>操作</th><br>    </tr><br>    &lt;c:forEach items=”${list}” var=”user”&gt;<br>        <tr><br>            <td>${user.id}</td><br>            <td>${user.name}</td><br>            <td>${user.address}</td><br>            <td>${user.phone}</td><br>            <td><br>                <a href="delete/${user.id}" class="del">删除</a> |<br>                <a href="edit/${user.id}">修改</a></td><br>        </tr><br>    &lt;/c:forEach&gt;<br></table></p>
+<p></p><p><br>    <a href="add">新增</a><br></p><p></p>
+<p><script><br>    var items = document.querySelectorAll(“.del”);<br>    for (var i = 0; i &lt; items.length; i++) {<br>        items[i].onclick = function () {<br>            return confirm(“您确认要删除吗？”);<br>        }<br>    }<br></script><br><br><br>复制代码</p>
+<p>新增：user/add.jsp</p>
+<p>复制代码<br>&lt;%@ page contentType=”text/html;charset=UTF-8” language=”java” %&gt;<br>&lt;%@ taglib prefix=”c” uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> %&gt;<br>&lt;!doctype html&gt;</p>
+<p><html></html></p>
+<p><head><br>    <meta charset="UTF-8"><br>    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><br>    <meta http-equiv="X-UA-Compatible" content="ie=edge"><br>    <title>用户管理</title><br></head></p>
+<p><body></body></p>
+<p></p><h2><br>    添加用户<br></h2><p></p>
+<p><form method="post" action="add"><br>    <fieldset><br>        <legend>用户信息</legend><br>        <p><br>            <label for="name">姓名：</label><br>            <input name="name" id="name" type="text" required="required" maxlength="32"><br>        </p><br>        <p><br>            <label for="address">地址：</label><br>            <input name="address" id="address" type="text" required="required" maxlength="128"><br>        </p><br>        <p><br>            <label for="phone">电话：</label><br>            <input name="phone" id="phone" type="text" required="required" maxlength="11"><br>        </p><br>        <p><br>            <button>提交</button><br>        </p><br>    </fieldset><br></form><br><a href="index">列表</a><br><br><br>复制代码</p>
+<p>编辑：user/edit.jsp</p>
+<p>复制代码<br>&lt;%@ page contentType=”text/html;charset=UTF-8” language=”java” %&gt;<br>&lt;%@ taglib prefix=”c” uri=”<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a> %&gt;<br>&lt;!doctype html&gt;</p>
+<p><html></html></p>
+<p><head><br>    <meta charset="UTF-8"><br>    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><br>    <meta http-equiv="X-UA-Compatible" content="ie=edge"><br>    <title>用户管理</title><br></head></p>
+<p><body></body></p>
+<p></p><h2><br>    修改用户<br></h2><p></p>
+<p><form method="post" action="../edit"><br>    <fieldset><br>        <legend>用户信息</legend><br>        <p><br>            <label for="id">编号：</label><br>            <input name="id" id="id" type="text" required="required" readonly="readonly" maxlength="32" value="${user.id}"><br>        </p><br>        <p><br>            <label for="name">姓名：</label><br>            <input name="name" id="name" type="text" required="required" maxlength="32" value="${user.name}"><br>        </p><br>        <p><br>            <label for="address">地址：</label><br>            <input name="address" id="address" type="text" required="required" maxlength="128" value="${user.address}"><br>        </p><br>        <p><br>            <label for="phone">电话：</label><br>            <input name="phone" id="phone" type="text" required="required" maxlength="11" value="${user.phone}"><br>        </p><br>        <p><br>            <button>提交</button><br>        </p><br>    </fieldset><br></form><br><a href="index">列表</a><br><br><br>复制代码</p>
+<p>4.6、Spring-MVC配置文件<br>resources/spring/spring-mvc.xml</p>
+<p>复制代码<br>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc" xsi:schemalocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+<pre><code>&lt;!--启用spring的一些annotation --&gt;
+&lt;context:annotation-config/&gt;
+
+&lt;!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 --&gt;
+&lt;context:component-scan base-package=&quot;com.zhangguo.springmvc08&quot;&gt;
+&lt;/context:component-scan&gt;
+
+&lt;!--HandlerMapping 无需配置，springmvc可以默认启动--&gt;
+
+&lt;!--静态资源映射--&gt;
+&lt;mvc:default-servlet-handler/&gt;
+&lt;!--如果发现是静态资源的请求，就将该请求转由Web应用服务器默认的Servlet处理，如果不是静态资源的请求，才由DispatcherServlet继续处--&gt;
+&lt;!--本项目把静态资源放在了WEB-INF的statics目录下，资源映射如下--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/css/**&quot; location=&quot;/WEB-INF/statics/css/&quot;/&gt;--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/js/**&quot; location=&quot;/WEB-INF/statics/js/&quot;/&gt;--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/image/**&quot; location=&quot;/WEB-INF/statics/image/&quot;/&gt;--&gt;
+
+&lt;!--但是项目部署到linux下发现WEB-INF的静态资源会出现无法解析的情况，但是本地tomcat访问正常，因此建议还是直接把静态资源放在webapp的statics下，映射配置如下--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/css/**&quot; location=&quot;/statics/css/&quot;/&gt;--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/js/**&quot; location=&quot;/statics/js/&quot;/&gt;--&gt;
+&lt;!--&lt;mvc:resources mapping=&quot;/image/**&quot; location=&quot;/statics/images/&quot;/&gt;--&gt;
+
+&lt;!-- 配置注解驱动 可以将request参数与绑定到controller参数上 --&gt;
+&lt;mvc:annotation-driven/&gt;
+
+&lt;!-- 对模型视图名称的解析，即在模型视图名称添加前后缀(如果最后一个还是表示文件夹,则最后的斜杠不要漏了) 使用JSP--&gt;
+&lt;!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- --&gt;
+&lt;bean id=&quot;defaultViewResolver&quot; class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;
+    &lt;property name=&quot;viewClass&quot; value=&quot;org.springframework.web.servlet.view.JstlView&quot;/&gt;
+    &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/views/&quot;/&gt;&lt;!--设置JSP文件的目录位置--&gt;
+    &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;!-- springmvc文件上传需要配置的节点--&gt;
+&lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&gt;
+    &lt;property name=&quot;maxUploadSize&quot; value=&quot;20971500&quot;/&gt;
+    &lt;property name=&quot;defaultEncoding&quot; value=&quot;UTF-8&quot;/&gt;
+    &lt;property name=&quot;resolveLazily&quot; value=&quot;true&quot;/&gt;
+&lt;/bean&gt;
+</code></pre><p></p></beans><br>复制代码<br>五、示例下载<br><a href="https://git.coding.net/zhangguo5/SpringMVC08.git" target="_blank" rel="noopener">https://git.coding.net/zhangguo5/SpringMVC08.git</a><p></p>
+<p>点击下载示例</p>
+<p>六、视频<br><a href="https://www.bilibili.com/video/av16991874/" target="_blank" rel="noopener">https://www.bilibili.com/video/av16991874/</a></p>
+<p>七、作业<br>6.1、请使用Spring MVC在页面上显示当前日期</p>
+<p>6.2、请使用Spring MVC完成如下功能（三选一），可以不使用数据库，直接使用集合就可以了</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    qiuzhibin
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2018/07/17/springMVC/" title="springMVC">http://yoursite.com/2018/07/17/springMVC/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/16/渣渣/" rel="next" title="渣渣">
+                <i class="fa fa-chevron-left"></i> 渣渣
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="qiuzhibin" />
+            
+              <p class="site-author-name" itemprop="name">qiuzhibin</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/2206411193" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://gitee.com/2206411193" target="_blank" title="Gitee">
+                    
+                      <i class="fa fa-fw fa-glide"></i>Gitee</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yourname @gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://plus.google.com/" target="_blank" title="Google">
+                    
+                      <i class="fa fa-fw fa-google"></i>Google</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.weibo.com/" target="_blank" title="微博">
+                    
+                      <i class="fa fa-fw fa-weibo"></i>微博</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/17865569223" target="_blank" title="知乎">
+                    
+                      <i class="fa fa-fw fa-bell"></i>知乎</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.csdn.net" title="CSDN博客主页" target="_blank">CSDN博客主页</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.baidu.com" title="百度主页" target="_blank">百度主页</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          <div id="player1" class="aplayer"></div>
+<script src="/js/src/APlayer.min.js"></script>
+<script type="text/javascript">
+var ap = new APlayer({
+    element: document.getElementById('player1'),                       // Optional, player element
+    narrow: false,                                                     // Optional, narrow style
+    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+    mutex: true,                                                       // Optional, pause other players when this player playing
+    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
+    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    listmaxheight: '513px',                                             // Optional, max height of play list
+    music: {                                                           // Required, music info, see: ###With playlist
+        title: '你曾是少年',                                          // Required, music title
+        author: 'cover',                          // Required, music author
+        url: 'http://mp3.qqmusic.cc/yq/102426570.mp3',  // Required, music url
+        pic: '/images/visitor.jpg',  // Optional, music picture
+    }
+});
+</script>
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">    ${message}</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">    用户管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">    添加用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">    修改用户</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">qiuzhibin</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:['http://oty1v077k.bkt.clouddn.com/bukagirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/jumpgirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/pentigirl.jpg',
+				'http://oty1v077k.bkt.clouddn.com/%E8%90%8C1.gif'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+</body>
+</html>
