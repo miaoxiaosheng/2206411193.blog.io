@@ -529,7 +529,7 @@
 var ap = new APlayer({
     element: document.getElementById('player1'),                       // Optional, player element
     narrow: false,                                                     // Optional, narrow style
-    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    autoplay: true,                                                    // Optional, autoplay song(s), not supported by mobile browsers
     showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
     mutex: true,                                                       // Optional, pause other players when this player playing
     theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
@@ -540,6 +540,12 @@ var ap = new APlayer({
         title: '你曾是少年',                                          // Required, music title
         author: 'cover',                          // Required, music author
         url: 'http://music.163.com/song/media/outer/url?id=28784401.mp3',  // Required, music url
+        pic: '/images/visitor.jpg',  // Optional, music picture
+    }
+    music: {                                                           // Required, music info, see: ###With playlist
+        title: '101公路',                                          // Required, music title
+        author: '邱智斌',                          // Required, music author
+        url: 'http://music.163.com/song/media/outer/url?id=41663351.mp3',  // Required, music url
         pic: '/images/visitor.jpg',  // Optional, music picture
     }
 });
