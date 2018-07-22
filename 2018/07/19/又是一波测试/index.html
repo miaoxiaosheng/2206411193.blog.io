@@ -22,6 +22,16 @@
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
   <link href="/lib/pace/pace-theme-center-circle.min.css?v=1.0.2" rel="stylesheet">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -111,10 +121,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.3">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
@@ -138,7 +148,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="又是一波测试">
 <meta property="og:url" content="http://yoursite.com/2018/07/19/又是一波测试/index.html">
-<meta property="og:site_name" content="My house">
+<meta property="og:site_name" content="Stay Hungry , Stay Foolish">
 <meta property="og:description" content="放在github page上的静态网站怎么取消绑定自定义域名？博客域名github购买域名后添加了 @   CNAME     我的用户名.github.io blog    A    192.30.252.154 blog    A    192.30.252.153 三条记录然后在gh-pages分支上添加了内容为blog.我的域名.cn的CNAME文件 但是访问的时候一直说服务器未响应，应该">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-07-19T03:59:03.000Z">
@@ -189,7 +199,7 @@
   </script>
 
 
-  <title>又是一波测试 | My house</title>
+  <title>又是一波测试 | Stay Hungry , Stay Foolish</title>
   
 
 
@@ -228,12 +238,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">My house</span>
+        <span class="site-title">Stay Hungry , Stay Foolish</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">Stay Hungry , Stay Foolish</h1>
+        <h1 class="site-subtitle" itemprop="description"></h1>
       
   </div>
 
@@ -331,26 +341,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -392,7 +398,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My house">
+      <meta itemprop="name" content="Stay Hungry , Stay Foolish">
     </span>
 
     
@@ -610,8 +616,8 @@ blog    A    192.30.252.153
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/22/springmvc拦截器/" rel="prev" title="springmvc拦截器">
-                springmvc拦截器 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/22/springmvc拦截器/" rel="prev" title="打赏功能测试">
+                打赏功能测试 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -704,7 +710,7 @@ blog    A    192.30.252.153
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -726,7 +732,7 @@ blog    A    192.30.252.153
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -821,12 +827,7 @@ var ap = new APlayer({
         url: 'http://music.163.com/song/media/outer/url?id=28784401.mp3',  // Required, music url
         pic: '/images/visitor.jpg',  // Optional, music picture
     }
-   /* music: {                                                           // Required, music info, see: ###With playlist
-        title: '101公路',                                          // Required, music title
-        author: '邱智斌',                          // Required, music author
-        url: 'http://music.163.com/song/media/outer/url?id=41663351.mp3',  // Required, music url
-        pic: '/images/visitor.jpg',  // Optional, music picture
-    }*/
+   
 });
 </script>
         </div>
@@ -1064,7 +1065,7 @@ var ap = new APlayer({
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1379,19 +1380,6 @@ var ap = new APlayer({
 
 
 
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
-
-
 
   
 
@@ -1609,5 +1597,5 @@ var myapc=new APlayer_Controler({
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"hijiki","position":"left","bottom":-30,"mobileShow":false,"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

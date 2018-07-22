@@ -22,6 +22,16 @@
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
   <link href="/lib/pace/pace-theme-center-circle.min.css?v=1.0.2" rel="stylesheet">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -111,10 +121,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.3">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
@@ -136,14 +146,14 @@
 
 <meta name="description" content="springmvc拦截器地方大幅度发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="springmvc拦截器">
+<meta property="og:title" content="打赏功能测试">
 <meta property="og:url" content="http://yoursite.com/2018/07/22/springmvc拦截器/index.html">
-<meta property="og:site_name" content="My house">
+<meta property="og:site_name" content="Stay Hungry , Stay Foolish">
 <meta property="og:description" content="springmvc拦截器地方大幅度发">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-22T09:15:37.000Z">
+<meta property="og:updated_time" content="2018-07-22T12:53:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="springmvc拦截器">
+<meta name="twitter:title" content="打赏功能测试">
 <meta name="twitter:description" content="springmvc拦截器地方大幅度发">
 
 
@@ -189,7 +199,7 @@
   </script>
 
 
-  <title>springmvc拦截器 | My house</title>
+  <title>打赏功能测试 | Stay Hungry , Stay Foolish</title>
   
 
 
@@ -228,12 +238,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">My house</span>
+        <span class="site-title">Stay Hungry , Stay Foolish</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <h1 class="site-subtitle" itemprop="description">Stay Hungry , Stay Foolish</h1>
+        <h1 class="site-subtitle" itemprop="description"></h1>
       
   </div>
 
@@ -331,26 +341,22 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
     <span class="popup-btn-close">
       <i class="fa fa-times-circle"></i>
     </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
   </div>
-
+  <div id="local-search-result"></div>
+</div>
 
 
 
@@ -392,7 +398,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My house">
+      <meta itemprop="name" content="Stay Hungry , Stay Foolish">
     </span>
 
     
@@ -400,7 +406,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">springmvc拦截器</h2>
+          <h2 class="post-title" itemprop="name headline">打赏功能测试</h2>
         
 
         <div class="post-meta">
@@ -428,7 +434,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-22T17:15:37+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-22T20:53:14+08:00">
                 2018-07-22
               </time>
             
@@ -442,7 +448,7 @@
 
           
           
-             <span id="/2018/07/22/springmvc拦截器/" class="leancloud_visitors" data-flag-title="springmvc拦截器">
+             <span id="/2018/07/22/springmvc拦截器/" class="leancloud_visitors" data-flag-title="打赏功能测试">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -602,6 +608,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/07/22/加密功能测试/" rel="prev" title="加密功能测试">
+                加密功能测试 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -701,7 +711,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -723,7 +733,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -818,12 +828,7 @@ var ap = new APlayer({
         url: 'http://music.163.com/song/media/outer/url?id=28784401.mp3',  // Required, music url
         pic: '/images/visitor.jpg',  // Optional, music picture
     }
-   /* music: {                                                           // Required, music info, see: ###With playlist
-        title: '101公路',                                          // Required, music title
-        author: '邱智斌',                          // Required, music author
-        url: 'http://music.163.com/song/media/outer/url?id=41663351.mp3',  // Required, music url
-        pic: '/images/visitor.jpg',  // Optional, music picture
-    }*/
+   
 });
 </script>
         </div>
@@ -1077,7 +1082,7 @@ var ap = new APlayer({
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
@@ -1392,19 +1397,6 @@ var ap = new APlayer({
 
 
 
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
-
-
 
   
 
@@ -1622,5 +1614,5 @@ var myapc=new APlayer_Controler({
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"hijiki","position":"left","bottom":-30,"mobileShow":false,"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
