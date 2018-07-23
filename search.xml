@@ -26,4 +26,17 @@
         <tag>maven</tag>
       </tags>
   </entry>
+  <entry>
+    <title><![CDATA[springmvc学习(二)]]></title>
+    <url>%2F2018%2F01%2F09%2F3%2F</url>
+    <content type="text"><![CDATA[开始springmvc]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>springmvc</tag>
+        <tag>maven</tag>
+      </tags>
+  </entry>
 </search>
