@@ -14,16 +14,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[建站历程]]></title>
+    <title><![CDATA[springmvc学习(一)]]></title>
     <url>%2F2018%2F01%2F09%2F2%2F</url>
-    <content type="text"><![CDATA[转载请注明作者和出处：www.qiuzhibin.comfg1.起因]]></content>
+    <content type="text"><![CDATA[开始springmvc]]></content>
       <categories>
-        <category>分享</category>
-        <category>hexo</category>
+        <category>web</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
+        <tag>java</tag>
+        <tag>springmvc</tag>
+        <tag>maven</tag>
       </tags>
   </entry>
 </search>
